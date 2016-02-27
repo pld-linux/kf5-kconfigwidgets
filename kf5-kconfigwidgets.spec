@@ -1,15 +1,15 @@
-%define		kdeframever	5.13
+%define		kdeframever	5.19
 %define		qtver		5.3.2
 %define		kfname		kconfigwidgets
 
 Summary:	Widgets for configuration dialogs
 Name:		kf5-%{kfname}
-Version:	5.13.0
+Version:	5.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	8fd3b16a2175475764d77972b980e075
+# Source0-md5:	ce0c538d90c1753fea03be8beacfc648
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
@@ -84,9 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/preparetips5
 %attr(755,root,root) %ghost %{_libdir}/libKF5ConfigWidgets.so.5
 %attr(755,root,root) %{_libdir}/libKF5ConfigWidgets.so.*.*
-%dir %{_datadir}/kf5/kconfigwidgets
-%dir %{_datadir}/kf5/kconfigwidgets/pics
-%{_datadir}/kf5/kconfigwidgets/pics/ktip-bulb.png
 %{_mandir}/man1/preparetips5.1*
 
 %files devel
