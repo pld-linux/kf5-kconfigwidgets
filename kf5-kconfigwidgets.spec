@@ -1,15 +1,15 @@
-%define		kdeframever	5.65
+%define		kdeframever	5.67
 %define		qtver		5.9.0
 %define		kfname		kconfigwidgets
 
 Summary:	Widgets for configuration dialogs
 Name:		kf5-%{kfname}
-Version:	5.65.0
+Version:	5.67.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	eaa39c13424aec64726e660b39c3fa0c
+# Source0-md5:	f00cf13031ae84283c16b56c400a51f7
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
