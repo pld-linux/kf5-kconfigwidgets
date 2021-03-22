@@ -1,15 +1,15 @@
-%define		kdeframever	5.79
+%define		kdeframever	5.80
 %define		qtver		5.9.0
 %define		kfname		kconfigwidgets
 
 Summary:	Widgets for configuration dialogs
 Name:		kf5-%{kfname}
-Version:	5.79.0
+Version:	5.80.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	3e594da911338a9ea526f3b6ec1e1edd
+# Source0-md5:	e7d3a1c8c1d75a617930afbfcddb197d
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
@@ -87,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %attr(755,root,root) %{_bindir}/preparetips5
-%attr(755,root,root) %ghost %{_libdir}/libKF5ConfigWidgets.so.5
+%ghost %{_libdir}/libKF5ConfigWidgets.so.5
 %attr(755,root,root) %{_libdir}/libKF5ConfigWidgets.so.*.*
 %{_mandir}/man1/preparetips5.1*
 %lang(ca) %{_mandir}/ca/man1/preparetips5.1*
@@ -110,5 +110,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/KF5/KConfigWidgets
 %{_includedir}/KF5/kconfigwidgets_version.h
 %{_libdir}/cmake/KF5ConfigWidgets
-%attr(755,root,root) %{_libdir}/libKF5ConfigWidgets.so
+%{_libdir}/libKF5ConfigWidgets.so
 %{qt5dir}/mkspecs/modules/qt_KConfigWidgets.pri
