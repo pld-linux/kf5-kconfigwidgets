@@ -1,5 +1,5 @@
 %define		kdeframever	5.80
-%define		qtver		5.9.0
+%define		qtver		5.14.0
 %define		kfname		kconfigwidgets
 
 Summary:	Widgets for configuration dialogs
@@ -11,16 +11,12 @@ Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
 # Source0-md5:	e7d3a1c8c1d75a617930afbfcddb197d
 URL:		http://www.kde.org/
-BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
-BuildRequires:	Qt5Gui-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
 BuildRequires:	Qt5Widgets-devel >= %{qtver}
-BuildRequires:	Qt5Xml-devel >= %{qtver}
-BuildRequires:	cmake >= 2.8.12
-BuildRequires:	gettext-devel
+BuildRequires:	cmake >= 3.5
+BuildRequires:	gettext-tools
 BuildRequires:	kf5-extra-cmake-modules >= %{version}
-BuildRequires:	kf5-karchive-devel >= %{version}
 BuildRequires:	kf5-kauth-devel >= %{version}
 BuildRequires:	kf5-kcodecs-devel >= %{version}
 BuildRequires:	kf5-kconfig-devel >= %{version}
@@ -33,7 +29,16 @@ BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires:	Qt5DBus >= %{qtver}
+Requires:	Qt5Widgets >= %{qtver}
 Requires:	kf5-dirs
+Requires:	kf5-kauth >= %{version}
+Requires:	kf5-kcodecs >= %{version}
+Requires:	kf5-kconfig >= %{version}
+Requires:	kf5-kcoreaddons >= %{version}
+Requires:	kf5-kguiaddons >= %{version}
+Requires:	kf5-ki18n >= %{version}
+Requires:	kf5-kwidgetsaddons >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt5dir		%{_libdir}/qt5
@@ -48,7 +53,7 @@ Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	cmake >= 2.6.0
+Requires:	cmake >= 3.5
 Requires:	kf5-kauth-devel >= %{version}
 Requires:	kf5-kcodecs-devel >= %{version}
 Requires:	kf5-kconfig-devel >= %{version}
