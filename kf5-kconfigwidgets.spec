@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.104
+%define		kdeframever	5.105
 %define		qtver		5.15.2
 %define		kfname		kconfigwidgets
 
 Summary:	Widgets for configuration dialogs
 Name:		kf5-%{kfname}
-Version:	5.104.0
-Release:	2
+Version:	5.105.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	1337a9ec6d04c5a4fa2586ef6dbaaf48
+# Source0-md5:	0930b105fb00bbb9886d127ec1075e2b
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
@@ -114,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pt_BR) %{_mandir}/pt_BR/man1/preparetips5.1*
 %lang(ru) %{_mandir}/ru/man1/preparetips5.1*
 %lang(sv) %{_mandir}/sv/man1/preparetips5.1*
+%lang(tr) %{_mandir}/tr/man1/preparetips5.1*
 %lang(uk) %{_mandir}/uk/man1/preparetips5.1*
 %{_datadir}/qlogging-categories5/kconfigwidgets.categories
 %attr(755,root,root) %{qt5dir}/plugins/designer/kconfigwidgets5widgets.so
